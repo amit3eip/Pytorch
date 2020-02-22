@@ -1,0 +1,146 @@
+Target 1:
+
+less than 15k params
+uses dropout of 0.1 
+uses batchnorm
+uses randomrotate transform
+uses StepLR with step size = 6 and gamma = 0.1
+achieves 99.4% test accuracy
+
+
+Result 1:
+
+After 15 epochs
+
+Training accuracy 99.03:
+Test accuracy 99.45%
+
+After 20 epochs
+
+Training accuracy 99.14:
+Test accuracy 99.42%
+Analysis 1:
+
+•	Model is achieving good accuracy on Test. Training Will do better after removing of dropout.
+•	But Parameters are above 10K -- 11,312
+•	Will test in Next accuracy with under 10 K parameters
+•	Also over fitting reduces if epoch is increased.
+
+Target 2:
+
+less than 10k params
+uses dropout of 0.1 
+uses batchnorm
+uses randomrotate transform
+uses StepLR with step size = 6 and gamma = 0.1
+Achieve 99% test accuracy
+
+
+Result 2:
+
+After 15 epochs
+
+Training accuracy 98.84:
+Test accuracy 99.26%
+
+After 20 epochs
+
+Training accuracy 98.81:
+Test accuracy 99.26%
+Analysis 2:
+
+•	Model is achieving good accuracy on Test.  Training will do better after removing of dropout.
+•	Parameters are under 10K -- 9136
+•	Accuracy not above 99.3 consistently
+•	Over fitting does not reduces if epoch is increased.
+Best accuracy 99.3
+
+Target 3:
+
+less than 10k params
+uses dropout of 0.1 
+uses batchnorm
+uses randomrotate transform
+uses StepLR with step size = 6 and gamma = 0.1
+Achieve 99.3% test accuracy
+
+
+Results 3:
+
+After 15 epochs
+
+Training accuracy 98.60:
+Test accuracy 99.24%
+
+After 20 epochs
+
+Training accuracy 98.57:
+Test accuracy 99.26%
+
+Analysis 3:
+
+•	Model is achieving good accuracy on Test.  Training will do better after removing of dropout.
+•	Parameters are under 10K – 9336 . Increased 1 * 1 Convolution
+•	Accuracy not above 99.3 consistently
+•	Over fitting does not reduces if epoch is increased.
+Best accuracy 99.3
+Target 4:
+
+less than 10k params
+uses dropout of 0.1 
+uses batchnorm
+uses randomrotate transform
+uses StepLR with step size = 3 and gamma = 0.1
+Achieve 99.3% test accuracy
+
+
+Result 4:
+
+After 15 epochs
+
+Training accuracy 98.08:
+Test accuracy 98.94%
+
+After 20 epochs
+
+Training accuracy 97.55:
+Test accuracy 98.97%
+Analysis 4:
+
+•	Model is not achieving good accuracy on Test.  
+•	Accuracy dropped by StepLR with step set to 3
+•	Over fitting does not reduces if epoch is increased.
+•	Does not achieve intended accuracy
+
+Target 5:
+
+less than 10k params
+uses dropout of 0.05
+uses batchnorm
+uses randomrotate transform
+uses StepLR with step size = 6 and gamma = 0.1
+Achieve 99.4% test accuracy
+
+
+Results 5:
+
+After 15 epochs
+
+Training accuracy 99.03:
+Test accuracy 99.52%
+
+After 20 epochs
+
+Training accuracy 99.00:
+Test accuracy 99.48%
+
+Analysis 5:
+
+•	Decreasing Step Size made model performance worse
+•	Revert to Model 3
+•	Reduced parameters 
+•	Decreased Batch Size
+•	Model is achieving good accuracy on Test
+•	Parameters are under 10K – 8700 
+•	Achieving Target as desired on consistent basis
+•	Best Accuracy 99.52  , in  15 epochs
